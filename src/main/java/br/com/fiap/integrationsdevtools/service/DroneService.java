@@ -5,6 +5,6 @@ import br.com.fiap.integrationsdevtools.dto.DroneDTO;
 
 public interface DroneService {
 
-	 DroneDTO create(DroneCreateDTO droneCreateDTO);
+	 DroneDTO send(DroneCreateDTO droneCreateDTO);
 
 }

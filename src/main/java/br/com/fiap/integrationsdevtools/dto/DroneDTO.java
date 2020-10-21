@@ -4,7 +4,7 @@ public class DroneDTO {
 
 	private Long droneid;
 	private Long latitude;
-	private Long logitude;
+	private Long longitude;
 	private Long temperatura;
 	
 	
@@ -20,11 +20,11 @@ public class DroneDTO {
 	public void setLatitude(Long latitude) {
 		this.latitude = latitude;
 	}
-	public Long getLogitude() {
-		return logitude;
+	public Long getLongitude() {
+		return longitude;
 	}
-	public void setLogitude(Long logitude) {
-		this.logitude = logitude;
+	public void setLongitude(Long longitude) {
+		this.longitude = longitude;
 	}
 	public Long getTemperatura() {
 		return temperatura;

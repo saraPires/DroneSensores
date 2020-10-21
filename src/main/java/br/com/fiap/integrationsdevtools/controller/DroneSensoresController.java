@@ -12,6 +12,7 @@ import org.springframework.http.HttpStatus;
 
 import br.com.fiap.integrationsdevtools.dto.DroneCreateDTO;
 import br.com.fiap.integrationsdevtools.dto.DroneDTO;
+import br.com.fiap.integrationsdevtools.produtor.DroneProdutor;
 import br.com.fiap.integrationsdevtools.service.DroneService;
 
 
@@ -23,16 +24,23 @@ public class DroneSensoresController {
     private final Logger logger = LoggerFactory.getLogger(DroneSensoresController.class);
 
     private final DroneService droneService;
+    private final DroneProdutor droneProdutor;
 
-    public DroneSensoresController(DroneService droneService) {
+    public DroneSensoresController(DroneService droneService, DroneProdutor droneProdutor) {
         this.droneService = droneService;
+        this.droneProdutor = droneProdutor;
     }
 
 	
-    @PutMapping("")
+    @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
-    public DroneDTO create(@RequestBody DroneCreateDTO droneCreateDTO){
-        return droneService.create(droneCreateDTO);
+    public void create(@RequestBody DroneCreateDTO droneCreateDTO){
+        try {
+			droneProdutor.sendDrone(droneCreateDTO);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 
 	
