@@ -5,7 +5,9 @@ public class DroneCreateDTO {
 	private Long droneid;
 	private Long latitude;
 	private Long logitude;
-	private Long temperatura;
+	private Double temperatura;
+	private Double unidade;
+	
 	public Long getDroneid() {
 		return droneid;
 	}
@@ -24,12 +26,19 @@ public class DroneCreateDTO {
 	public void setLogitude(Long logitude) {
 		this.logitude = logitude;
 	}
-	public Long getTemperatura() {
+	public Double getTemperatura() {
 		return temperatura;
 	}
-	public void setTemperatura(Long temperatura) {
+	public void setTemperatura(Double temperatura) {
 		this.temperatura = temperatura;
 	}
+	public Double getUnidade() {
+		return unidade;
+	}
+	public void setUnidade(Double unidade) {
+		this.unidade = unidade;
+	}
+	
 	
 	
 

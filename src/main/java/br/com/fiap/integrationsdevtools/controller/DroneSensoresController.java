@@ -24,24 +24,40 @@ public class DroneSensoresController {
     private final Logger logger = LoggerFactory.getLogger(DroneSensoresController.class);
 
     private final DroneService droneService;
-    private final DroneProdutor droneProdutor;
+ 
 
-    public DroneSensoresController(DroneService droneService, DroneProdutor droneProdutor) {
+    public DroneSensoresController(DroneService droneService) {
         this.droneService = droneService;
-        this.droneProdutor = droneProdutor;
+        
     }
 
 	
-    @PostMapping("")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void create(@RequestBody DroneCreateDTO droneCreateDTO){
         try {
-			droneProdutor.sendDrone(droneCreateDTO);
+        	droneService.send(droneCreateDTO);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			logger.info("");
 		}
+        logger.info("Envio de dados do drone" );
     }
+    
+    
+    //PutGetAllDrone
+    
+    //GetMonitorDroneById
+    
+    
+    //Post
+    //Put
+    //Delete
+
+
+    //GetAllDrones
+    //GetAllMonitoramentoByDroneId
 
 	
 }
