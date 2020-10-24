@@ -14,7 +14,7 @@ import br.com.fiap.integrationmicroservice.dto.DroneMedicoesDTO;
 @Service
 public interface DroneService  {
 	
-	 DroneDTO send(DroneCreateDTO droneCreateDTO);
+	 void send(DroneCreateDTO droneCreateDTO);
 	 List<DroneDTO> getAllDrone();
 	 DroneDTO getMonitorDroneById(DroneDTO droneid);
 	 List<DroneMedicoesDTO> getAllDrones();

@@ -20,7 +20,6 @@ public class DroneServiceImpl implements DroneService {
 	
 	@Override
 	public void send(DroneCreateDTO droneCreateDTO) {
-		
 		try {
 			droneProdutor.sendDrone(droneCreateDTO);
 		} catch (Exception e) {
@@ -29,7 +28,7 @@ public class DroneServiceImpl implements DroneService {
 	}
 
 	@Override
-	public List<Drone> putGetAllDrone() {
+	public List<DroneDTO> putGetAllDrone() {
 		// TODO Auto-generated method stub
 		return null;
 	}
