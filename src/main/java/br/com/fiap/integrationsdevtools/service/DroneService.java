@@ -7,15 +7,19 @@ import org.springframework.stereotype.Service;
 
 import br.com.fiap.integrationsdevtools.dto.DroneCreateDTO;
 import br.com.fiap.integrationsdevtools.dto.DroneDTO;
-import br.com.fiap.integrationsdevtools.entity.Drone;
+import br.com.fiap.integrationsdevtools.dto.DroneMedicoesDTO;
+
 
 
 
 @Service
 public interface DroneService  {
 	
-	 
-	 void send(DroneCreateDTO droneCreateDTO);
-	 List<Drone> putGetAllDrone();
-	 Drone getMonitorDroneById(DroneDTO droneid); 
+	 DroneDTO send(DroneCreateDTO droneCreateDTO);
+	 List<DroneDTO> getAllDrone();
+	 DroneDTO getMonitorDroneById(DroneDTO droneid);
+	 List<DroneMedicoesDTO> getAllDrones();
+	 DroneMedicoesDTO getAllMonitoramentoByDroneId(Long id);
+	 void delete(Long id);
+	 List<DroneDTO> findAll(Integer numero); 
 }

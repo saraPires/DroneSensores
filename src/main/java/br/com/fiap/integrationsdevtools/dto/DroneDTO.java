@@ -26,6 +26,10 @@ public class DroneDTO {
 		this.rastreamento = rastreamento;
 	}
 	
+	public DroneDTO() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public long getIdDrone() {
 		return idDrone;
 	}

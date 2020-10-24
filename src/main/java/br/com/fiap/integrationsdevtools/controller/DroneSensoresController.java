@@ -4,23 +4,11 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.http.HttpStatus;
 
 
-import br.com.fiap.integrationsdevtools.dto.DroneCreateDTO;
-import br.com.fiap.integrationsdevtools.dto.DroneCreateUpdateDTO;
-import br.com.fiap.integrationsdevtools.dto.DroneDTO;
-import br.com.fiap.integrationsdevtools.dto.DroneMedicoesDTO;
+import br.com.fiap.integrationsdevtools.dto.*;
 import br.com.fiap.integrationsdevtools.produtor.DroneProdutor;
 import br.com.fiap.integrationsdevtools.service.DroneService;
 
@@ -81,13 +69,13 @@ public class DroneSensoresController {
     //GetAllDrones
     @GetMapping
 	public List<DroneMedicoesDTO> getAllDrones(){
-       droneService.getAllDrones();
+       return droneService.getAllDrones();
     }
     
     //GetAllMonitoramentoByDroneId
     @GetMapping
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public DroneMedicoesDTO  getAllMonitoramentoByDroneId(@PathVariable Long id) {
-    	droneService.getAllMonitoramentoByDroneId(Long id);
+    public DroneMedicoesDTO getAllMonitoramentoByDroneId(@PathVariable Long id) {
+    	return droneService.getAllMonitoramentoByDroneId(id);
     }
 }
