@@ -19,13 +19,10 @@ import br.com.fiap.integrationsdevtools.service.DroneService;
 public class DroneSensoresController {
 
     private final Logger logger = LoggerFactory.getLogger(DroneSensoresController.class);
-
     private final DroneService droneService;
- 
 
     public DroneSensoresController(DroneService droneService) {
         this.droneService = droneService;
-        
     }
 
 	
@@ -39,7 +36,7 @@ public class DroneSensoresController {
 			e.printStackTrace();
 			logger.info("");
 		}
-        logger.info("Envio de dados do drone" );
+        logger.info("Envio de dados do drone");
     }
     
     @GetMapping

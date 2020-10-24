@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import br.com.fiap.integrationsdevtools.dto.DroneCreateDTO;
 import br.com.fiap.integrationsdevtools.dto.DroneDTO;
 import br.com.fiap.integrationsdevtools.dto.DroneMedicoesDTO;
-import br.com.fiap.integrationsdevtools.entity.Drone;
 import br.com.fiap.integrationsdevtools.produtor.DroneProdutor;
 
 @Service
@@ -20,17 +19,13 @@ public class DroneServiceImpl implements DroneService {
 	}
 	
 	@Override
-	public DroneDTO send(DroneCreateDTO droneCreateDTO) {
-		// TODO Auto-generated method stub
-		DroneDTO droneDTO = new DroneDTO();
+	public void send(DroneCreateDTO droneCreateDTO) {
+		
 		try {
 			droneProdutor.sendDrone(droneCreateDTO);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		return droneDTO;
 	}
 
 	@Override
@@ -40,13 +35,7 @@ public class DroneServiceImpl implements DroneService {
 	}
 
 	@Override
-	public Drone getMonitorDroneById(DroneDTO droneid) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public DroneDTO send(DroneCreateDTO droneCreateDTO) {
+	public DroneDTO getMonitorDroneById(DroneDTO droneid) {
 		// TODO Auto-generated method stub
 		return null;
 	}
