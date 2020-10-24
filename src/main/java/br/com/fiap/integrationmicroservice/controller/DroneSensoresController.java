@@ -1,4 +1,4 @@
-package br.com.fiap.integrationsdevtoolsmicroservice.controller;
+package br.com.fiap.integrationmicroservice.controller;
 
 import java.util.List;
 
@@ -6,9 +6,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
-import br.com.fiap.integrationsdevtoolsmicroservice.dto.*;
-import br.com.fiap.integrationsdevtoolsmicroservice.produtor.DroneProdutor;
-import br.com.fiap.integrationsdevtoolsmicroservice.service.DroneService;
+import br.com.fiap.integrationmicroservice.dto.*;
+import br.com.fiap.integrationmicroservice.produtor.DroneProdutor;
+import br.com.fiap.integrationmicroservice.service.DroneService;
 
 import org.springframework.http.HttpStatus;
 

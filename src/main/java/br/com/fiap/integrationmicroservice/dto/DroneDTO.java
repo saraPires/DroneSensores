@@ -1,9 +1,9 @@
-package br.com.fiap.integrationsdevtoolsmicroservice.dto;
+package br.com.fiap.integrationmicroservice.dto;
 
 import java.sql.Date;
 
-public class DroneCreateDTO {
-	
+public class DroneDTO {
+
 	private long idDrone;
 	private Long latitude;
 	private Long longitude;
@@ -14,10 +14,8 @@ public class DroneCreateDTO {
 	
 	
 	
-	
-	
-	public DroneCreateDTO(long idDrone, Long latitude, Long longitude, Long temperatura, Double unidade,
-			Date dataAtualizacao, Boolean rastreamento) {
+	public DroneDTO(long idDrone, Long latitude, Long longitude, Long temperatura, Double unidade, Date dataAtualizacao,
+			Boolean rastreamento) {
 		super();
 		this.idDrone = idDrone;
 		this.latitude = latitude;
@@ -28,7 +26,10 @@ public class DroneCreateDTO {
 		this.rastreamento = rastreamento;
 	}
 	
-	
+	public DroneDTO() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public long getIdDrone() {
 		return idDrone;
 	}
@@ -71,20 +72,19 @@ public class DroneCreateDTO {
 	public void setRastreamento(Boolean rastreamento) {
 		this.rastreamento = rastreamento;
 	}
-	
-	
-	
-	
+
 	@Override
 	public String toString() {
-		return "DroneCreateDTO [idDrone=" + idDrone + ", latitude=" + latitude + ", longitude=" + longitude
-				+ ", temperatura=" + temperatura + ", unidade=" + unidade + ", dataAtualizacao=" + dataAtualizacao
-				+ ", rastreamento=" + rastreamento + "]";
-	}
-	
-	
-	
-	
+		return "DroneDTO [idDrone=" + idDrone + ", latitude=" + latitude + ", longitude=" + longitude + ", temperatura="
+				+ temperatura + ", unidade=" + unidade + ", dataAtualizacao=" + dataAtualizacao + ", rastreamento="
+				+ rastreamento + ", getIdDrone()=" + getIdDrone() + ", getLatitude()=" + getLatitude()
+				+ ", getLongitude()=" + getLongitude() + ", getTemperatura()=" + getTemperatura() + ", getUnidade()="
+				+ getUnidade() + ", getDataAtualizacao()=" + getDataAtualizacao() + ", getRastreamento()="
+				+ getRastreamento() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
+				+ super.toString() + "]";
+	} 
 
-
+	
+	
+	
 }

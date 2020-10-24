@@ -1,9 +1,9 @@
-package br.com.fiap.integrationsdevtoolsmicroservice.consumer;
+package br.com.fiap.integrationmicroservice.consumer;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 
-import br.com.fiap.integrationsdevtoolsmicroservice.configuration.Configuracao;
-import br.com.fiap.integrationsdevtoolsmicroservice.dto.DroneDTO;
+import br.com.fiap.integrationmicroservice.configuration.Configuracao;
+import br.com.fiap.integrationmicroservice.dto.DroneDTO;
 
 
 public class DroneConsumer {

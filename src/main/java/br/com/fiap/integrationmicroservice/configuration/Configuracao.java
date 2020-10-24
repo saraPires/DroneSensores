@@ -1,4 +1,4 @@
-package br.com.fiap.integrationsdevtoolsmicroservice.configuration;
+package br.com.fiap.integrationmicroservice.configuration;
 
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 

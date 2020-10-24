@@ -1,4 +1,4 @@
-package br.com.fiap.integrationsdevtoolsmicroservice.produtor;
+package br.com.fiap.integrationmicroservice.produtor;
 
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.DirectExchange;
@@ -8,9 +8,9 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 
 import com.google.gson.Gson;
 
-import br.com.fiap.integrationsdevtoolsmicroservice.configuration.Configuracao;
-import br.com.fiap.integrationsdevtoolsmicroservice.dto.DroneCreateDTO;
-import br.com.fiap.integrationsdevtoolsmicroservice.dto.DroneDTO;
+import br.com.fiap.integrationmicroservice.configuration.Configuracao;
+import br.com.fiap.integrationmicroservice.dto.DroneCreateDTO;
+import br.com.fiap.integrationmicroservice.dto.DroneDTO;
 
 
 public class DroneProdutor {
