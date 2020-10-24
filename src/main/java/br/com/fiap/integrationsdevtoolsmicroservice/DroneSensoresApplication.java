@@ -1,4 +1,4 @@
-package br.com.fiap.integrationsdevtools;
+package br.com.fiap.integrationsdevtoolsmicroservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

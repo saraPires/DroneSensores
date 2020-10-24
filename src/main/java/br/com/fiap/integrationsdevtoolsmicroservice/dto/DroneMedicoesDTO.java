@@ -1,4 +1,4 @@
-package br.com.fiap.integrationsdevtools.dto;
+package br.com.fiap.integrationsdevtoolsmicroservice.dto;
 
 import java.util.List;
 

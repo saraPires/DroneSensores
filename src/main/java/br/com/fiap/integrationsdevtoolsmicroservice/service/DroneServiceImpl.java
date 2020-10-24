@@ -1,13 +1,13 @@
-package br.com.fiap.integrationsdevtools.service;
+package br.com.fiap.integrationsdevtoolsmicroservice.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import br.com.fiap.integrationsdevtools.dto.DroneCreateDTO;
-import br.com.fiap.integrationsdevtools.dto.DroneDTO;
-import br.com.fiap.integrationsdevtools.dto.DroneMedicoesDTO;
-import br.com.fiap.integrationsdevtools.produtor.DroneProdutor;
+import br.com.fiap.integrationsdevtoolsmicroservice.dto.DroneCreateDTO;
+import br.com.fiap.integrationsdevtoolsmicroservice.dto.DroneDTO;
+import br.com.fiap.integrationsdevtoolsmicroservice.dto.DroneMedicoesDTO;
+import br.com.fiap.integrationsdevtoolsmicroservice.produtor.DroneProdutor;
 
 @Service
 public class DroneServiceImpl implements DroneService {
