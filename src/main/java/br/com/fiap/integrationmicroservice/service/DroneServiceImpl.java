@@ -1,10 +1,12 @@
 package br.com.fiap.integrationmicroservice.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
 import br.com.fiap.integrationmicroservice.dto.DroneCreateDTO;
+import br.com.fiap.integrationmicroservice.dto.DroneCreateUpdateDTO;
 import br.com.fiap.integrationmicroservice.dto.DroneDTO;
 import br.com.fiap.integrationmicroservice.dto.DroneMedicoesDTO;
 import br.com.fiap.integrationmicroservice.produtor.DroneProdutor;
@@ -28,17 +30,16 @@ public class DroneServiceImpl implements DroneService {
 		}
 	}
 
-	@Override
 	public List<DroneDTO> putGetAllDrone() {
-		List<DroneDTO> drone
+		List<DroneDTO> drone = new ArrayList<>();
 		// TODO Auto-generated method stub
-		return null;
+		return drone;
 	}
 
-	@Override
-	public DroneDTO getMonitorDroneById(DroneDTO droneid) {
+	public DroneDTO getMonitorDroneById(Long droneid) {
+		 DroneDTO dadosDrone = new DroneDTO();
 		// TODO Auto-generated method stub
-		return null;
+		return dadosDrone;
 	}
 
 	@Override
@@ -73,6 +74,18 @@ public class DroneServiceImpl implements DroneService {
 
 	@Override
 	public List<DroneDTO> findAll(Integer numero) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public DroneDTO update(Long id, DroneCreateUpdateDTO productCreateUpdateDTO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public DroneDTO findById(Long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

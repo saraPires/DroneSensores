@@ -22,12 +22,10 @@ public class DroneSensoresController {
     private final DroneService droneService;
     
     
-    
     public DroneSensoresController(DroneService droneService) {
         this.droneService = droneService;
     }
 
-	
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void create(@RequestBody DroneCreateDTO droneCreateDTO){
@@ -61,9 +59,10 @@ public class DroneSensoresController {
 	  	}
 	  
 	  @DeleteMapping("{id}")
-	  
-	  @ResponseStatus(HttpStatus.NO_CONTENT) public void delete(@PathVariable Long
-	  id){ droneService.delete(id); }
+	  @ResponseStatus(HttpStatus.NO_CONTENT) 
+	  public void delete(@PathVariable Long id){ 
+		  droneService.delete(id); 
+	  }
 	  
 	  //GetAllDrones
 	  
@@ -76,6 +75,6 @@ public class DroneSensoresController {
 	  
 	  @GetMapping
 	  @ResponseStatus(HttpStatus.NO_CONTENT) 
-	  public DroneMedicoesDTO getAllMonitoramentoByDroneId(@PathVariable Long id) { return
-	  droneService.getAllMonitoramentoByDroneId(id); }
+	  public DroneMedicoesDTO getAllMonitoramentoByDroneId(@PathVariable Long id) { 
+		  return droneService.getAllMonitoramentoByDroneId(id); }
 	 }
