@@ -32,9 +32,7 @@ public class DroneProdutor {
         RabbitAdmin admin = new RabbitAdmin(Configuracao.getConnection());
         Queue queueDrone = new Queue(orderQueue);
         final String exchange = "drone.entrada";
-
         admin.declareQueue(queueDrone);
-
 		/*
 		 * DirectExchange exchangeDrone = new DirectExchange(exchange);
 		 * admin.declareExchange(exchangeDrone);
@@ -42,7 +40,6 @@ public class DroneProdutor {
 		 * dadosDrone));
 		 */
         RabbitTemplate template = new RabbitTemplate(Configuracao.getConnection());
-        
         template.convertAndSend(exchange, "drone_data", dadosDrone );
     }
 	
