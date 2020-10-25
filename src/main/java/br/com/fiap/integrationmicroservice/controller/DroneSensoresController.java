@@ -20,7 +20,9 @@ public class DroneSensoresController {
 
     private final Logger logger = LoggerFactory.getLogger(DroneSensoresController.class);
     private final DroneService droneService;
-
+    
+    
+    
     public DroneSensoresController(DroneService droneService) {
         this.droneService = droneService;
     }
@@ -39,40 +41,41 @@ public class DroneSensoresController {
         logger.info("Envio de dados do drone");
     }
     
-    @GetMapping
-    public List<DroneDTO> getAllDrone(@RequestParam(required = false) Integer numero){
-        logger.info("Hello");
-        return droneService.findAll(numero);
-    }
-
-    @GetMapping("{id}")
-    public DroneDTO GetMonitorDroneById(@PathVariable Long id){
-        return droneService.findById(id);
-    }
-
-
-    @PutMapping("{id}/medicoes")
-    public DroneDTO update(@PathVariable Long id,
-                             @RequestBody DroneCreateUpdateDTO productCreateUpdateDTO){
-        return droneService.update(id, productCreateUpdateDTO);
-    }
-
-    @DeleteMapping("{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void delete(@PathVariable Long id){
-    	droneService.delete(id);
-    }
-
-    //GetAllDrones
-    @GetMapping
-	public List<DroneMedicoesDTO> getAllDrones(){
-       return droneService.getAllDrones();
-    }
-    
-    //GetAllMonitoramentoByDroneId
-    @GetMapping
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public DroneMedicoesDTO getAllMonitoramentoByDroneId(@PathVariable Long id) {
-    	return droneService.getAllMonitoramentoByDroneId(id);
-    }
-}
+	
+	  @GetMapping 
+	  public List<DroneDTO> getAllDrone(@RequestParam(required = false)	Integer numero)	  { 
+		  logger.info("Envio dados do drone atualizado"); 
+		  return droneService.findAll(numero); 
+	}
+	  
+	  @GetMapping("{id}") 
+	  public DroneDTO getMonitorDroneById(@PathVariable Long id){ 
+		  return droneService.findById(id); 
+	  }
+	  
+	  
+	  @PutMapping("{id}/medicoes") 
+	  public DroneDTO update(@PathVariable Long id,
+			  				 @RequestBody DroneCreateUpdateDTO productCreateUpdateDTO){ 
+		  return droneService.update(id, productCreateUpdateDTO); 
+	  	}
+	  
+	  @DeleteMapping("{id}")
+	  
+	  @ResponseStatus(HttpStatus.NO_CONTENT) public void delete(@PathVariable Long
+	  id){ droneService.delete(id); }
+	  
+	  //GetAllDrones
+	  
+	  @GetMapping 
+	  public List<DroneMedicoesDTO> getAllDrones(){ 
+	    return droneService.getAllDrones(); 
+	  }
+	  
+	  //GetAllMonitoramentoByDroneId
+	  
+	  @GetMapping
+	  @ResponseStatus(HttpStatus.NO_CONTENT) 
+	  public DroneMedicoesDTO getAllMonitoramentoByDroneId(@PathVariable Long id) { return
+	  droneService.getAllMonitoramentoByDroneId(id); }
+	 }

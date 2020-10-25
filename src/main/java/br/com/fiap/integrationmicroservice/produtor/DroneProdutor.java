@@ -5,6 +5,7 @@ import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Value;
 
 import com.google.gson.Gson;
 
@@ -15,6 +16,10 @@ import br.com.fiap.integrationmicroservice.dto.DroneDTO;
 
 public class DroneProdutor {
 
+    @Value("${queue.order.name}")
+    private String orderQueue;
+
+	
     public void sendDrone( DroneCreateDTO droneCreateDTO ) throws Exception {
     	
     	//Convertendo o objeto para Json
@@ -23,7 +28,7 @@ public class DroneProdutor {
     	
         //Set up queue, exchanges and bindings
         RabbitAdmin admin = new RabbitAdmin(Configuracao.getConnection());
-        Queue queueDrone = new Queue("drone-queue.entrada");
+        Queue queueDrone = new Queue(orderQueue);
         final String exchange = "drone.entrada";
 
         admin.declareQueue(queueDrone);

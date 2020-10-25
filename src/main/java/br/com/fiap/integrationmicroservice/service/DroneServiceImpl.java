@@ -12,6 +12,7 @@ import br.com.fiap.integrationmicroservice.produtor.DroneProdutor;
 @Service
 public class DroneServiceImpl implements DroneService {
 
+
 	private final DroneProdutor droneProdutor;
 	
 	public DroneServiceImpl(DroneProdutor droneProdutor) {
@@ -29,6 +30,7 @@ public class DroneServiceImpl implements DroneService {
 
 	@Override
 	public List<DroneDTO> putGetAllDrone() {
+		List<DroneDTO> drone
 		// TODO Auto-generated method stub
 		return null;
 	}
