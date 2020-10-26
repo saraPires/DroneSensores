@@ -1,6 +1,6 @@
 package br.com.fiap.integrationmicroservice.dto;
 
-import java.sql.Date;
+import java.time.LocalDateTime;
 
 public class DroneCreateDTO {
 	
@@ -9,15 +9,11 @@ public class DroneCreateDTO {
 	private Long longitude;
 	private Long temperatura;
 	private Double unidade;
-	private Date dataAtualizacao;
+	private LocalDateTime  dataAtualizacao;
 	private Boolean rastreamento;
 	
-	
-	
-	
-	
 	public DroneCreateDTO(long idDrone, Long latitude, Long longitude, Long temperatura, Double unidade,
-			Date dataAtualizacao, Boolean rastreamento) {
+			LocalDateTime  dataAtualizacao, Boolean rastreamento) {
 		super();
 		this.idDrone = idDrone;
 		this.latitude = latitude;
@@ -59,10 +55,10 @@ public class DroneCreateDTO {
 	public void setUnidade(Double unidade) {
 		this.unidade = unidade;
 	}
-	public Date getDataAtualizacao() {
+	public LocalDateTime  getDataAtualizacao() {
 		return dataAtualizacao;
 	}
-	public void setDataAtualizacao(Date dataAtualizacao) {
+	public void setDataAtualizacao(LocalDateTime  dataAtualizacao) {
 		this.dataAtualizacao = dataAtualizacao;
 	}
 	public Boolean getRastreamento() {
@@ -72,19 +68,11 @@ public class DroneCreateDTO {
 		this.rastreamento = rastreamento;
 	}
 	
-	
-	
-	
 	@Override
 	public String toString() {
 		return "DroneCreateDTO [idDrone=" + idDrone + ", latitude=" + latitude + ", longitude=" + longitude
 				+ ", temperatura=" + temperatura + ", unidade=" + unidade + ", dataAtualizacao=" + dataAtualizacao
 				+ ", rastreamento=" + rastreamento + "]";
 	}
-	
-	
-	
-	
-
 
 }
