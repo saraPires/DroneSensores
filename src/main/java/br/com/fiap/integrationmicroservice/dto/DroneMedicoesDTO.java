@@ -5,13 +5,13 @@ import java.util.List;
 public class DroneMedicoesDTO {
 	
 	private long id;
-	private String nome;
 	private List<DroneDTO> medicoes;
 	
-	public DroneMedicoesDTO(long id, String nome, List<DroneDTO> medicoes) {
+	
+	
+	public DroneMedicoesDTO(long id,List<DroneDTO> medicoes) {
 		super();
 		this.id = id;
-		this.nome = nome;
 		this.medicoes = medicoes;
 	}
 	public long getId() {
@@ -20,12 +20,7 @@ public class DroneMedicoesDTO {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+
 	public List<DroneDTO> getMedicoes() {
 		return medicoes;
 	}
@@ -34,7 +29,7 @@ public class DroneMedicoesDTO {
 	}
 	@Override
 	public String toString() {
-		return "DroneMedicoesDTO [id=" + id + ", nome=" + nome + ", medicoes=" + medicoes + "]";
+		return "DroneMedicoesDTO [id=" + id + ", medicoes=" + medicoes + "]";
 	}
 	
 	

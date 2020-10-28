@@ -2,22 +2,22 @@ package br.com.fiap.integrationmicroservice.dto;
 
 public class DroneCreateUpdateDTO {
 	
-	private Long latitude;
-	private Long logitude;
+	private Double latitude;
+	private Double logitude;
 	private Double temperatura;
 	private Double unidade;
 	
 	
-	public Long getLatitude() {
+	public Double getLatitude() {
 		return latitude;
 	}
-	public void setLatitude(Long latitude) {
+	public void setLatitude(Double latitude) {
 		this.latitude = latitude;
 	}
-	public Long getLogitude() {
+	public Double getLogitude() {
 		return logitude;
 	}
-	public void setLogitude(Long logitude) {
+	public void setLogitude(Double logitude) {
 		this.logitude = logitude;
 	}
 	public Double getTemperatura() {

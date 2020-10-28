@@ -12,6 +12,14 @@ public class DroneCreateDTO {
 	private LocalDateTime  dataAtualizacao;
 	private Boolean rastreamento;
 	
+	
+	
+	public DroneCreateDTO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public DroneCreateDTO(long idDrone, Double latitude, Double longitude, Double temperatura, Double unidade,
 			LocalDateTime  dataAtualizacao, Boolean rastreamento) {
 		super();
