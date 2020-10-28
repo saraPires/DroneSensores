@@ -17,6 +17,7 @@ import br.com.fiap.integrationmicroservice.controller.DroneSensoresController;
 public class Configuracao {
 	
 	private final Logger logger = LoggerFactory.getLogger(Configuracao.class);
+	
 	private static CachingConnectionFactory connectionFactory;
 	private static Environment environment;
 
