@@ -1,11 +1,9 @@
 package br.com.fiap.integrationmicroservice.dto;
 
 import java.time.LocalDateTime;
-
 /**
- * Classe de configuração para os arquivos 
- * 
- *  
+ * POJO para envio dos dados do drone 
+ * @author Sara Regina Pires 
  *              
  *              
  **/

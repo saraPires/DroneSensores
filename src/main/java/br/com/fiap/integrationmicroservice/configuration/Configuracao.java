@@ -5,9 +5,8 @@ import org.springframework.core.env.Environment;
 
 
 /**
- * Classe de configuração para os arquivos 
- * 
- * @param 
+ * Classe de configuração para conexão com o RabbitMQ AMPQM 
+ * @author Sara Regina Pires 
  *              
  *              
  **/
